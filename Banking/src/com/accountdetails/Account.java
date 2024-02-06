@@ -3,6 +3,7 @@ public class Account {
 	int acc_no;
 	String name;
 	float amount;
+
 	void insert(int acc_no,String name,float amount) {
 		this.acc_no=acc_no;
 		this.name=name;
@@ -13,12 +14,13 @@ public class Account {
 		System.out.println(amt+" deposited");
 		}
 	void withdraw(float amt) {
-		if(amount<amt) {
-			System.out.println("Insufficient Balance");
-			}
-		else {
+		if(amount>=amt) {
 			amount=amount-amt;
 			System.out.println(amt+" withdrawn");
+			
+			}
+		else {
+			System.out.println("Insufficient Balance");
 			}
 		}
 	void checkbalance() {
